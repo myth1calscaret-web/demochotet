@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thiệp mời – Hội trại Ngày Tết Quê Em</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Be+Vietnam+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --red: #b71c1c;
+      --gold: #f5c16c;
+      --bg: #3b1d1d;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Be Vietnam Pro', sans-serif;
+      background: radial-gradient(circle at top, #5a2a2a, var(--bg));
+      color: #fff8ec;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 32px 24px;
+      border: 2px solid var(--gold);
+      border-radius: 20px;
+      background: rgba(0,0,0,0.35);
+      box-shadow: 0 0 40px rgba(245,193,108,0.2);
+      position: relative;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+      font-size: 3rem;
+      color: var(--gold);
+      margin-bottom: 8px;
+      letter-spacing: 2px;
+    }
+
+    h2 {
+      text-align: center;
+      font-weight: 400;
+      margin-top: 0;
+      margin-bottom: 32px;
+      color: #ffe3a3;
+    }
+
+    p {
+      line-height: 1.8;
+      font-size: 1.05rem;
+      margin: 14px 0;
+    }
+
+    .highlight {
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    .info {
+      margin-top: 28px;
+      padding-top: 20px;
+      border-top: 1px dashed rgba(245,193,108,0.6);
+    }
+
+    .info p {
+      margin: 8px 0;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 14px 28px;
+      background: linear-gradient(135deg, #f5c16c, #ffdd9a);
+      color: #4a1d1d;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 30px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 28px rgba(0,0,0,0.4);
+    }
+
+    footer {
+      margin-top: 32px;
+      text-align: center;
+      font-style: italic;
+      color: #ffdca8;
+    }
+
+    /* Hiệu ứng hoa mai rơi */
+    .petal {
+      position: fixed;
+      top: -10px;
+      width: 10px;
+      height: 10px;
+      background: radial-gradient(circle, #ffdca8, #f5c16c);
+      border-radius: 50%;
+      pointer-events: none;
+      animation: fall linear infinite;
+      opacity: 0.8;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh) translateX(40px);
+        opacity: 0;
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2.2rem; }
+      .container { margin: 20px; padding: 24px 18px; }
+    }
+/* ===== NỀN ẢNH LỚP ===== */
+body {
+  background:
+    linear-gradient(rgba(59,29,29,0.65), rgba(59,29,29,0.65)),
+    url("assets/anhlop.jpg") center / cover fixed no-repeat;
+}
+
+/* ===== ĐÈN LỒNG ===== */
+.lantern {
+  position: fixed;
+  top: 0;
+  width: 240	px;
+  z-index: 1;
+  animation: lanternSwing 4s ease-in-out infinite;
+}
+
+.lantern.left {
+  left: 40px;
+}
+
+.lantern.right {
+  right: 40px;
+}
+
+@keyframes lanternSwing {
+  0%   { transform: rotate(0deg); }
+  50%  { transform: rotate(6deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* ===== CÀNH MAI / ĐÀO ===== */
+.branch {
+  position: fixed;
+  width: 520px;
+  z-index: 1;
+  opacity: 0.95;
+}
+
+.branch.mai {
+  bottom: -20px;
+  left: -20px;
+}
+
+.branch.dao {
+  top: 120px;
+  right: -30px;
+}
+
+/* Đảm bảo nội dung nổi lên trên */
+.container {
+  position: relative;
+  z-index: 2;
+}
+
+  </style>
+
+</head>
+<body>
+<!-- Đèn lồng -->
+<img src="assets/lantern.png" class="lantern left" alt="Đèn lồng">
+<img src="assets/lantern.png" class="lantern right" alt="Đèn lồng">
+
+<!-- Cành mai & đào -->
+<img src="assets/mai.png" class="branch mai" alt="Cành mai">
+<img src="assets/dao.png" class="branch dao" alt="Cành đào">
+
+
+  <div class="container">
+    <h1>THIỆP MỜI</h1>
+    <h2>Hội trại Ngày Tết Quê Em – Trường THPT Chân Mộng</h2>
+
+    <p>Lớp <span class="highlight">10A1</span> chúng con trân trọng kính mời quý phụ huynh cùng gia đình đến tham dự Hội trại 
+<span class="highlight">“Ngày Tết Quê Em”</span> được tổ chức tại trường trong không khí rộn ràng, ấm áp của những ngày đầu xuân.</p>
+
+<p>Đây là dịp để chúng con được trải nghiệm các hoạt động mang đậm bản sắc Tết cổ truyền, giao lưu, gắn kết và lưu giữ những kỷ niệm đẹp của tuổi học trò.</p>
+
+<p><span class="highlight">Sự hiện diện của quý phụ huynh</span> là niềm vinh dự lớn lao, đồng thời là nguồn động viên tinh thần quý giá, góp phần làm nên thành công và ý nghĩa trọn vẹn cho hội trại.</p>
+
+    <div class="info">
+      <p><strong>Thời gian tổ chức:</strong> Thứ Năm, ngày 05/02 và Thứ Sáu, ngày 06/02</p>
+      <p><strong>Địa điểm:</strong> Sân Trường THPT Chân Mộng</p>
+      <p><strong>Giáo viên chủ nhiệm:</strong> Hán Thị Thu Hà</p>
+      <p><strong>Ban cán sự lớp 10A1:</strong></p>
+      <p>– Lớp trưởng: Phạm Gia Hân<br>
+         – Bí thư: Lê Hải Anh<br>
+         – Phó học tập: Thân Thị Hải Anh</p>
+    </div>
+
+    <div class="center">
+      <a class="btn" href="#" onclick="alert('Cảm ơn quý phụ huynh đã tham dự!')">Tôi sẽ tham dự 🎉</a>
+    </div>
+
+    <footer>
+      Rất hân hạnh được đón tiếp quý phụ huynh!
+    </footer>
+  </div>
+
+  <script>
+    // Tạo hiệu ứng hoa mai rơi
+    const createPetal = () => {
+      const petal = document.createElement('div');
+      petal.classList.add('petal');
+      petal.style.left = Math.random() * window.innerWidth + 'px';
+      petal.style.animationDuration = 5 + Math.random() * 5 + 's';
+      document.body.appendChild(petal);
+      setTimeout(() => petal.remove(), 10000);
+    };
+
+    setInterval(createPetal, 300);
+  </script>
+
+</body>
+</html>
